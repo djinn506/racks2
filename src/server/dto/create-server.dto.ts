@@ -1,1 +1,5 @@
-export class CreateServerDto {}
+export class CreateServerDto {
+    id: number;
+    brand: string;
+    model: string;
+}
