@@ -27,27 +27,41 @@ export class ComponentService {
 
   async findOne(id: number): Promise <Component | null> {
     /* return this.componentRepository.findOneBy({ id }); */
-    const component = await this.componentRepository.findOneBy({
-      id,
-    } as FindOptionsWhere<Component>);
-    if (component === null) {
-      throw new HttpException('ID Not Found', HttpStatus.BAD_REQUEST);
+    try {
+        const component = await this.componentRepository.findOneBy({
+        id,
+        } as FindOptionsWhere<Component>);
+      if (component === null) {
+        throw new HttpException('ID Not Found', HttpStatus.BAD_REQUEST);
+      }
+      return component;
+      } catch (error) {
+      console.error(`ERROR: ${error}`)
     }
-    return component;
+    
   }
 
   async update(id: number, updateComponentDto: UpdateComponentDto) {
-    await this.componentRepository.update({ id }, updateComponentDto)
-    return await this.findOne(id);
+    try {
+      await this.componentRepository.update({ id }, updateComponentDto)
+      return await this.findOne(id);  
+    } catch (error) {
+      console.error(`ERROR: ${error}`)
+    }
+    
   }
 
   async remove(id: number): Promise<void> {
     /* await this.componentRepository.delete(id); */
-    const del = await this.findOne(id);
-    if (del === null) {
-      throw new HttpException('ID Not Found', HttpStatus.BAD_REQUEST);
-    } else {
-      await this.componentRepository.delete(id);
+    try {
+      const del = await this.findOne(id);
+      if (del === null) {
+        throw new HttpException('ID Not Found', HttpStatus.BAD_REQUEST);
+      } else {
+        await this.componentRepository.delete(id);
+      }
+    } catch (error) {
+      console.error(`ERROR: ${error}`)
     }
   }
 }
