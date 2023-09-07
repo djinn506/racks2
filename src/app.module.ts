@@ -1,3 +1,4 @@
+import * as dotenv from 'dotenv';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -6,6 +7,8 @@ import { ComponentModule } from './component/component.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Component } from './component/entities/component.entity';
 import { Server } from './server/entities/server.entity';
+
+dotenv.config();
 
 const db_options = {
   host: process.env.DB_HOST,
