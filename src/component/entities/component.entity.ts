@@ -1,4 +1,4 @@
-import { Server } from "src/server/entities/server.entity";
+import { Server } from "../../server/entities/server.entity";
 import {Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm"
 
 @Entity()

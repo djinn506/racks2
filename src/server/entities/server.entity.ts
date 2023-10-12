@@ -1,4 +1,4 @@
-import { Component } from "src/component/entities/component.entity";
+import { Component } from "../../component/entities/component.entity";
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
