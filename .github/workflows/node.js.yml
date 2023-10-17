@@ -10,7 +10,7 @@ on:
 env:
   DB_USER: servers
   DB_HOST: localhost
-  DB_NAME: test_db
+  DB_NAME: servers
   DB_PASSWORD: secret123!
   DB_PORT: 5432
 
