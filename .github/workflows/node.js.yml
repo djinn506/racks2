@@ -8,11 +8,11 @@ on:
     branches: [ "main" ]
 
 env:
-  DB_USER:servers
-  DB_HOST:localhost
-  DB_NAME:test_db
-  DB_PASSWORD:secret123!
-  DB_PORT:5432
+  DB_USER: servers
+  DB_HOST: localhost
+  DB_NAME: test_db
+  DB_PASSWORD: secret123!
+  DB_PORT: 5432
 
 jobs:
   test:
