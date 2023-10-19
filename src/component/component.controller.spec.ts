@@ -53,7 +53,7 @@ describe('ComponentController', () => {
     ])
 
     expect(
-      await compController.create({
+      compController.create({
         id:1,
         brand: "NVIDIA",
         model: "180",
