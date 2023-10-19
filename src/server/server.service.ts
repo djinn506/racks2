@@ -18,9 +18,9 @@ export class ServerService {
 
   findAll() {
     return this.serverRepository.find({
-/*       relations:{
+      relations:{
         component: true
-      }, */
+      },
     });
   }
 
