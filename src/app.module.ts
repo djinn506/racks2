@@ -28,7 +28,7 @@ const db_options = {
       ssl: process.env.DB_SSL === "true",
       extra: {
         ssl:
-          process.env.POSTGRES_SSL === "true"
+          process.env.DB_SSL === "true"
             ? {
                 rejectUnauthorized: false,
               }
