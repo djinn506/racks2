@@ -48,6 +48,7 @@ import * as dotenv from 'dotenv';
     it('should create 2 servers', async () => {
       expect(
         controller.create({
+          id:1,
           brand: "MikroTik",
           model: "911 Lite5 ac",
           }),
