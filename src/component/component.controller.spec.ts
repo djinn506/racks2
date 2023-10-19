@@ -44,7 +44,7 @@ describe('ComponentController', () => {
 
   it('should create a component and asign to a server', async () => {
     
-    const aserver = await Promise.all([
+    const aserver = Promise.all([
       serverController.create({
         id:1,
         brand:"MikroTik",
