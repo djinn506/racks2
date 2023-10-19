@@ -16,8 +16,6 @@ const db_options = {
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  ssl: process.env.DB_SSL === "true",
-
 };
 
 @Module({
@@ -27,6 +25,7 @@ const db_options = {
       ...db_options,
       entities: [Component, Server],
       synchronize: true,
+      ssl: process.env.DB_SSL === "true",
       extra: {
         ssl:
           process.env.POSTGRES_SSL === "true"
