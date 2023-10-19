@@ -29,7 +29,7 @@ jobs:
           - 5432:5432
         env:
           POSTGRES_PASSWORD: ${{ env.DB_PASSWORD }}
-          POSTGRES_DB: ${{ env.DB_NAME }}
+          POSTGRES_DB: test_db
           POSTGRES_USER: ${{ env.DB_USER }}
 
     steps:
