@@ -29,11 +29,10 @@ import * as dotenv from 'dotenv';
             ...db_options,
             entities: [Component, Server],
             synchronize: false,
-            /* autoLoadEntities: true */
+            autoLoadEntities: true
           }),
           TypeOrmModule.forFeature([Server])
       ]
-      /* Agregar Componentes a la tabla */
     
   /*   afterEach(async () => {
         const dataSource = app.get(DataSource);

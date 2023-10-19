@@ -32,6 +32,7 @@ describe('ComponentController', () => {
           ...db_options,
           entities: [Component, Server],
           synchronize: false,
+          autoLoadEntities: true
         }),
         TypeOrmModule.forFeature([Component, Server])
     ]
