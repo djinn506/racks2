@@ -46,7 +46,7 @@ describe('ServerController', () => {
       }),
       ).toEqual({
         id:expect.any(Number),
-        brand: "MikroTik",
+        brand: "Supreme",
         model: "999",
         });
     });

@@ -54,7 +54,7 @@ describe('ComponentController', () => {
       }),
       ).toEqual({
         id:expect.any(Number),
-        brand: "NVIDIA",
+        brand: "AMD",
         model: "180",
         type: "GPU",
         image: '/assets/noimage.jpg',
