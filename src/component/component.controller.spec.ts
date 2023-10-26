@@ -49,7 +49,8 @@ describe('ComponentController', () => {
       image: '/assets/noimage.jpg',
       stock: 66,
       quantity: 2,
-      isActive: true
+      isActive: true,
+      serverId: 1
       }),
       ).toEqual({
         id:expect.any(Number),
@@ -60,6 +61,7 @@ describe('ComponentController', () => {
         stock: 66,
         quantity: 2,
         isActive: true,
+        serverId:expect.any(Number),
         });
     });
 });
