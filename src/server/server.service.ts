@@ -26,42 +26,28 @@ export class ServerService {
 
   async findOne(id: number): Promise <Server | null> {
     /* return this.serverRepository.findOneBy({ id }); */
-    try {
       const server = await this.serverRepository.findOneBy({
         id,
       } as FindOptionsWhere<Server>);
       if (server === null) {
         throw new HttpException('ID Not Found', HttpStatus.BAD_REQUEST);
       }
-      return server;  
-    } catch (error) {
-      console.error(`ERROR: ${error}`)
-    }
-    
+      return server;
   }
 
   async update(id: number, updateServerDto: UpdateServerDto) {
-    try {
+    
       await this.serverRepository.update({ id }, updateServerDto)
       return await this.findOne(id);  
-    } catch (error) {
-      console.error(`ERROR: ${error}`)
-    }
-    
   }
 
   async remove(id: number): Promise<void> {
     /* await this.serverRepository.delete(id); */
-    try {
       const del = await this.findOne(id);
       if (del === null) {
         throw new HttpException('ID Not Found', HttpStatus.BAD_REQUEST);
       } else {
         await this.serverRepository.delete(id);
       }
-    } catch (error) {
-      console.error(`ERROR: ${error}`)
-    }
-
   }
 }
