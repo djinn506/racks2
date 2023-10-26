@@ -26,9 +26,12 @@ export class ServerService {
 
   async findOne(id: number): Promise <Server | null> {
     /* return this.serverRepository.findOneBy({ id }); */
-      const server = await this.serverRepository.findOneBy({
-        id,
-      } as FindOptionsWhere<Server>);
+      const server = await this.serverRepository.findOne({
+        where:{ id },
+        relations:{
+          component: true
+        }
+      });
       if (server === null) {
         throw new HttpException('ID Not Found', HttpStatus.BAD_REQUEST);
       }
@@ -42,7 +45,7 @@ export class ServerService {
   }
 
   async remove(id: number): Promise<void> {
-    /* await this.serverRepository.delete(id); */
+    
       const del = await this.findOne(id);
       if (del === null) {
         throw new HttpException('ID Not Found', HttpStatus.BAD_REQUEST);
