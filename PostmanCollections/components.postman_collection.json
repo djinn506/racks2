@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "899f1777-513f-4753-bdba-bad7da3ab026",
+		"name": "components",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30581293"
+	},
+	"item": [
+		{
+			"name": "GET ALL component",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/component"
+			},
+			"response": []
+		},
+		{
+			"name": "Filter BY",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/component?type=gpu&brand=NVIDIA&model=\"rtx 9999\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"component"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "gpu"
+						},
+						{
+							"key": "brand",
+							"value": "NVIDIA"
+						},
+						{
+							"key": "model",
+							"value": "\"rtx 9999\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE component (orphan)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"brand\": \"Intel\",\n        \"model\": \"Arc Mage\",\n        \"type\": \"GPU\",\n        \"image\": \"noimage.jpg\",\n        \"stock\": 1,\n        \"quantity\": 1,\n        \"isActive\": true\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/component"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE component",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"brand\": \"KINGSTONE\",\n    \"model\": \"8GB\",\n    \"type\": \"RAM\",\n    \"image\": \"noimage.jpg\",\n    \"stock\": 1,\n    \"quantity\": 1,\n    \"isActive\": false,\n    \"server\": {\n        \"id\": 10\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/component"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE component Lots",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"brand\": \"NVIDIA\",\n        \"model\": \"3060\",\n        \"type\": \"GPU\",\n        \"image\": \"/assets/NVDIA3060.jpg\",\n        \"stock\": 1,\n        \"quantity\": 0,\n        \"isActive\": false,\n        \"server\": null\n    },\n    {\n        \"brand\": \"KINGSTONE\",\n        \"model\": \"8GB\",\n        \"type\": \"RAM\",\n        \"image\": \"/assets/KingstonFury8Gb.jpeg\",\n        \"stock\": 1,\n        \"quantity\": 1,\n        \"isActive\": false,\n        \"server\": null\n    },\n    {\n        \"brand\": \"NVIDIA\",\n        \"model\": \"3060\",\n        \"type\": \"GPU\",\n        \"image\": \"/assets/NVDIA3060.jpg\",\n        \"stock\": 1,\n        \"quantity\": 0,\n        \"isActive\": true,\n        \"server\": null\n    },\n    {\n        \"brand\": \"Kingstone\",\n        \"model\": \"Fury 8GB\",\n        \"type\": \"RAM\",\n        \"image\": \"/assets/KingstonFury8Gb.jpeg\",\n        \"stock\": 3,\n        \"quantity\": 0,\n        \"isActive\": false,\n        \"server\": null\n    },\n    {\n        \"brand\": \"Kingstone\",\n        \"model\": \"Fury\",\n        \"type\": \"RAM\",\n        \"image\": \"/assets/KingstonFury8Gb.jpeg\",\n        \"stock\": 3,\n        \"quantity\": 0,\n        \"isActive\": true,\n        \"server\": null\n    },\n    {\n        \"brand\": \"Kingston\",\n        \"model\": \"Fury\",\n        \"type\": \"RAM\",\n        \"image\": \"/assets/KingstonFury8Gb.jpeg\",\n        \"stock\": 1,\n        \"quantity\": 0,\n        \"isActive\": false,\n        \"server\": null\n    },\n    {\n        \"brand\": \"NVIDIA\",\n        \"model\": \"rtx 9999\",\n        \"type\": \"GPU\",\n        \"image\": \"/assets/noimage.jpg\",\n        \"stock\": 1,\n        \"quantity\": 0,\n        \"isActive\": false,\n        \"server\": null\n    },\n    {\n        \"brand\": \"NVIDIA\",\n        \"model\": \"rtx 9999\",\n        \"type\": \"GPU\",\n        \"image\": \"/assets/noimage.jpg\",\n        \"stock\": 1,\n        \"quantity\": 0,\n        \"isActive\": false,\n        \"server\": null\n    },\n    {\n        \"brand\": \"NVIDIA\",\n        \"model\": \"rtx 9999\",\n        \"type\": \"GPU\",\n        \"image\": \"/assets/noimage.jpg\",\n        \"stock\": 1,\n        \"quantity\": 0,\n        \"isActive\": false,\n        \"server\": null\n    },\n    {\n        \"brand\": \"NVIDIA\",\n        \"model\": \"rtx 9999\",\n        \"type\": \"GPU\",\n        \"image\": \"/assets/noimage.jpg\",\n        \"stock\": 1,\n        \"quantity\": 0,\n        \"isActive\": false,\n        \"server\": null\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/component"
+			},
+			"response": []
+		},
+		{
+			"name": "FindById component",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/component"
+			},
+			"response": []
+		},
+		{
+			"name": "Update component",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"id\": 1,\n        \"brand\": \"NVIDIA\",\n        \"model\": \"GeForcd 2060\",\n        \"type\": \"GPU\",\n        \"stock\": 99,\n        \"quantity\": 2,\n        \"isActive\": true\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/component/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Update component (unlink)",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"id\": 1,\n        \"brand\": \"NVIDIA\",\n        \"model\": \"GeForce 3060\",\n        \"type\": \"GPU\",\n        \"stock\": 99,\n        \"quantity\": 2,\n        \"isActive\": true\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/component/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete component",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/component/4"
+			},
+			"response": []
+		},
+		{
+			"name": "update replace img",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"image\": \"/assets/NVDIA3060.jpg\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": ""
+			},
+			"response": []
+		}
+	]
+}

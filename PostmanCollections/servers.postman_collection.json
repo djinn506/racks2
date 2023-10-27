@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "830e8007-fa4c-4489-9e5d-7205d3095742",
+		"name": "servers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30581293"
+	},
+	"item": [
+		{
+			"name": "GET ALL servers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/server"
+			},
+			"response": []
+		},
+		{
+			"name": "Filter BY",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/server?brand=\"MikroTik\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"server"
+					],
+					"query": [
+						{
+							"key": "brand",
+							"value": "\"MikroTik\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE server",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"brand\": \"MikroTik\",\n  \"model\": \"L009UiGS-RM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/server"
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE server Lots",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"brand\": \"MikroTik\",\n  \"model\": \"L009UiGS-RM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/server"
+			},
+			"response": []
+		},
+		{
+			"name": "FindById server",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/server/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Update server",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n    \"brand\": \"MikroTik\",\n    \"model\": \"SXTsq Lite2\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/server/5"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete server",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/server/3"
+			},
+			"response": []
+		}
+	]
+}
