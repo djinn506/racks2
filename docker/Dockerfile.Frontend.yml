@@ -1,0 +1,16 @@
+FROM node:18-alpine
+
+WORKDIR /racksapp/app
+
+COPY ./racksapp/package.json .
+
+RUN npm install
+
+COPY ./racksapp .
+
+EXPOSE 4200
+
+#CMD ["./bin/start.sh"]
+
+ENTRYPOINT ["node_modules/.bin/ng", "serve", "--host", "0.0.0.0", "--watch"]
+

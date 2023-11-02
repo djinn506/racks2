@@ -1,0 +1,30 @@
+FROM node:18-alpine
+
+WORKDIR /racks/opt
+
+COPY ./racks/package.json .
+
+RUN npm install
+#RUN npm install @nestjs/typeorm
+
+COPY ./racks .
+
+#RUN npm run build
+
+#RUN npm cache clean --force
+
+#ENV POSTGRES_USER=servers
+#ENV POSTGRES_DB=servers
+#ENV POSTGRES_PASSWORD=secret123!
+
+ENV DB_HOST=postgres
+ENV DB_USER=servers
+ENV DB_NAME=servers
+ENV DB_PASSWORD=secret123!
+
+EXPOSE 3000
+
+CMD ["npm", "run", "build"]
+
+ENTRYPOINT ["npm", "run", "start"]
+
