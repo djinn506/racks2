@@ -1,4 +1,4 @@
-import { Body, HttpException, HttpStatus, Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { CreateComponentDto } from './dto/create-component.dto';
 import { UpdateComponentDto } from './dto/update-component.dto';
 import { InjectRepository } from '@nestjs/typeorm';

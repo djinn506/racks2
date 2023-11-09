@@ -3,7 +3,7 @@ import { CreateServerDto } from './dto/create-server.dto';
 import { UpdateServerDto } from './dto/update-server.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Server } from './entities/server.entity';
-import { FindOptionsWhere, Repository } from 'typeorm';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class ServerService {
