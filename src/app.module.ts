@@ -25,17 +25,17 @@ const db_options = {
       ...db_options,
       entities: [Component, Server],
       synchronize: true,
-      ssl: process.env.DB_SSL === "true",
+      ssl: process.env.DB_SSL === 'true',
       extra: {
         ssl:
-          process.env.DB_SSL === "true"
+          process.env.DB_SSL === 'true'
             ? {
                 rejectUnauthorized: false,
               }
             : null,
       },
     }),
-    ServerModule, ComponentModule],
+    ServerModule],
   controllers: [AppController],
   providers: [AppService],
 })

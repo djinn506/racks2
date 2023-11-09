@@ -32,36 +32,35 @@ describe('ComponentController', () => {
           synchronize: true,
         }),
         TypeOrmModule.forFeature([Component, Server])
-    ]
+    ],
      }).compile();
 
     compController = module.get<ComponentController>(ComponentController);
   });
 
-
   it('should create a component', async () => {
     expect(
       await compController.create({
       id:1,
-      brand: "NVIDIA",
-      model: "180",
-      type: "GPU",
+      brand: 'NVIDIA',
+      model: '180',
+      type: 'GPU',
       image: '/assets/noimage.jpg',
       stock: 66,
       quantity: 2,
       isActive: true,
       serverId: 1
       }),
-      ).toEqual({
-        id:expect.any(Number),
-        brand: "NVIDIA",
-        model: "180",
-        type: "GPU",
-        image: '/assets/noimage.jpg',
-        stock: 66,
-        quantity: 2,
-        isActive: true,
-        serverId:expect.any(Number),
-        });
+    ).toEqual({
+      id:expect.any(Number),
+      brand: 'NVIDIA',
+      model: '180',
+      type: 'GPU',
+      image: '/assets/noimage.jpg',
+      stock: 66,
+      quantity: 2,
+      isActive: true,
+      serverId:expect.any(Number),
+      });
     });
 });
