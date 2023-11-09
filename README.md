@@ -20,6 +20,7 @@
   <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
 </p>
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e07d025f81924648a02a6b6735115b40)](https://app.codacy.com/gh/djinn506/racks2?utm_source=github.com&utm_medium=referral&utm_content=djinn506/racks2&utm_campaign=Badge_Grade)
 <p align="center"> [![Codacy Badge](https://app.codacy.com/project/badge/Grade/1de51486cbfb4a02b81ad9a9ef6941a7)](https://app.codacy.com/gh/djinn506/racks2/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) </p>
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
