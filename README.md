@@ -1,4 +1,5 @@
-<p align="center"><a href="https://app.codacy.com/gh/djinn506/racks2/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/1de51486cbfb4a02b81ad9a9ef6941a7"/></a></p>
+<p align="center"><a href="https://app.codacy.com/gh/djinn506/racks2/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/1de51486cbfb4a02b81ad9a9ef6941a7"/></a>
+<a href="https://codecov.io/gh/djinn506/racks2" ><img src="https://codecov.io/gh/djinn506/racks2/graph/badge.svg?token=4IDVPQGS9Z"/></a></p>
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
