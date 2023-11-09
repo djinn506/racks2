@@ -30,24 +30,24 @@ describe('ServerController', () => {
           entities: [Component, Server],
           synchronize: true,
         }),
-        TypeOrmModule.forFeature([Component, Server])
-    ]
-     }).compile();
+        TypeOrmModule.forFeature([Component, Server]),
+      ],
+    }).compile();
 
-     serverController = module.get<ServerController>(ServerController);
+    serverController = module.get<ServerController>(ServerController);
   });
 
   it('should create a server', async () => {
     expect(
       await serverController.create({
-      id:1,
-      brand: "MikroTik",
-      model: "999",
+        id: 1,
+        brand: 'MikroTik',
+        model: '999',
       }),
-      ).toEqual({
-        id:expect.any(Number),
-        brand: "MikroTik",
-        model: "999",
-        });
+    ).toEqual({
+      id: expect.any(Number),
+      brand: 'MikroTik',
+      model: '999',
     });
+  });
 });

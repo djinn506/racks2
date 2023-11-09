@@ -1,5 +1,5 @@
 export class CreateServerDto {
-    id: number;
-    brand: string;
-    model: string;
+  id: number;
+  brand: string;
+  model: string;
 }

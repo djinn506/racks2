@@ -35,7 +35,8 @@ const db_options = {
             : null,
       },
     }),
-    ServerModule],
+    ServerModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
