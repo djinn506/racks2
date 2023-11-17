@@ -6,6 +6,7 @@ import { ServerModule } from './server/server.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Component } from './component/entities/component.entity';
 import { Server } from './server/entities/server.entity';
+import { ComponentModule } from './component/component.module';
 
 dotenv.config();
 
@@ -35,6 +36,7 @@ const db_options = {
       },
     }),
     ServerModule,
+    ComponentModule,
   ],
   controllers: [AppController],
   providers: [AppService],
